@@ -9,7 +9,7 @@ const errorMessage = document.querySelector('.err')
 const get = async () => {
     try{
         if(inputValue.value === ''){
-            errorMessage.textContent = 'Enter a Country'
+            errorMessage.textContent = 'Enter a City'
         }else{
             const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&appid=e9c0ab1dfd154039e73edf08ef2c3528`)
             if(!res.ok){
@@ -19,8 +19,9 @@ const get = async () => {
             displaycontent.innerHTML = `
             <h1 class="name">${inputValue.value}</h1>
             <p class="desc">Description: ${data.weather[0].description}</p>
-            <p class="temp">Temperature: ${data.main.temp}</p>
+            <p class="temp">Temperature: ${Math.floor(data.main.temp)}°C</p>
             <p class="temp">Country: ${data.sys.country}</p>`
+            errorMessage.style.display = 'none'
         }
         }catch(err){
             errorMessage.textContent = `${err}`
