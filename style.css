@@ -1,0 +1,50 @@
+.input{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.button{
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 5px;
+    background-color: rgb(100, 162, 212);
+    cursor: pointer;
+}
+
+.button:hover{
+    box-shadow: 2px 2px 2px black;
+}
+
+.inputValue{
+    padding: 10px;
+}
+
+.display{
+    text-align: center;
+    margin-right: 60px;
+}
+
+.body{
+    background: linear-gradient(steelblue, blue, lightblue);
+    width: 600px;
+    margin: auto;
+    padding: 1px;
+    border-radius: 20px;
+}
+
+.err{
+    text-align: center;
+    margin-right: 60px;
+}
+
+@media(max-width: 500px){
+    .body{
+        width: 270px;
+    }
+    .display{
+        margin-right: 30px;
+    }
+}
+
