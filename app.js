@@ -11,7 +11,7 @@ const get = async () => {
         if(inputValue.value === ''){
             errorMessage.textContent = 'Enter a City'
         }else{
-            const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&appid=e9c0ab1dfd154039e73edf08ef2c3528`)
+            const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&appid=e9c0ab1dfd154039e73edf08ef2c3528&units=metric`)
             if(!res.ok){
                 throw new Error('wrong city name')
             }
